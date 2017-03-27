@@ -1,0 +1,55 @@
+<div id="zone" >
+<!DOCTYPE html>
+
+     <script src="../js/loading.js"></script>
+     <script src="../js/jquery.js"></script>
+
+<script>
+
+    ces = new ces();
+
+</script>
+
+
+<body  onLoad="ces.show_query();">
+<hr>
+<FORM NAME="joe">
+<INPUT TYPE="hidden" NAME="burns">
+</FORM>
+
+
+
+
+
+	  
+<SCRIPT LANGUAGE="javascript">
+
+var locate = window.location
+document.joe.burns.value = locate
+
+var text = document.joe.burns.value
+
+function delineate(str)
+{
+theleft = str.indexOf("=") + 1;
+theright = str.lastIndexOf("&");
+return(str.substring(theleft, theright));
+}
+document.write("<input type='hidden' id='fqdn' value='" + delineate(text) + "'></input>" );
+function delineate2(str)
+{
+point = str.lastIndexOf("=");
+return(str.substring(point+1,str.length));
+}
+document.write("<input type='hidden' id='msisdn' value='" + delineate2(text) + "'></input>" );
+</SCRIPT> 
+<br>
+<br>	  
+	
+
+</body>
+
+
+</html>
+
+</div>
